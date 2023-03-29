@@ -1,0 +1,12 @@
+div {
+    display: flex;
+    justify-content: center;
+}
+
+div a {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 7px;
+    text-decoration: none;
+}
