@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div class="all-link">
+        <a class="link" href="Demo.html">Demo <button>Click Me</button></a>
+    </div>
     <div id="wrap">
         <img id="certificate" src="Certificate.jpeg" alt="Certificate">
     </div>
@@ -21,6 +24,11 @@
     <div>
         <cite>Harshit Joshi</cite>
     </div>
+    <div class="event">
+        <button>
+            *
+        </button>
+    </div>
 
 </body>
 
@@ -30,6 +38,25 @@
     body {
         background-color: aquamarine;
         margin: 0;
+    }
+
+    .link {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 25px;
+        color: white;
+        background-color: blueviolet;
+        text-decoration: none;
+        align-items: center;
+    }
+
+    .link button {
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
     }
 
     #wrap {
