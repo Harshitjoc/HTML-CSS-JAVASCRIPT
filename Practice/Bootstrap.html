@@ -10,7 +10,14 @@
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+    <header></header>
+    <main>
+        <aside></aside>
+        <section></section>
+    </main>
+    <footer></footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
@@ -20,3 +27,40 @@
 </body>
 
 </html>
+
+<style>
+    header {
+        background-color: lightblue;
+        height: 80px;
+        position: sticky;
+        top: 0;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    aside {
+        width: 29%;
+        margin-right: 1%;
+        height: 450px;
+        background-color: aquamarine;
+        display: inline-block;
+    }
+
+    main {
+        padding: 16px 10%;
+    }
+
+    section {
+        width: 69%;
+        height: 450px;
+        background-color: lawngreen;
+        display: inline-block;
+    }
+
+    footer {
+        background-color: antiquewhite;
+        height: 300px;
+    }
+</style>

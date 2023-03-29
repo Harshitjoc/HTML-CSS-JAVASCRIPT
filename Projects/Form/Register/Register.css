@@ -1,0 +1,64 @@
+<style>body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 16px;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.input-box {
+    width: 100%;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 12px;
+    margin-bottom: 36px;
+}
+
+form {
+    text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 32px;
+}
+
+.submit-item {
+    background-color: blue;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 18px;
+    border: none;
+}
+
+.external {
+    background-color: aliceblue;
+    padding: 24px;
+}
+
+.input-item {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+</style>

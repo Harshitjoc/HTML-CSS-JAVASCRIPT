@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="DemoStyle.css">
+    <script src="https://kit.fontawesome.com/8d5a3e70b7.js" crossorigin="anonymous"></script>
     <title>
         This is a Demo Project.
     </title>
@@ -11,7 +12,9 @@
 <body>
     <!-- This is a Comment-->
 
-    <h1 id="Header1"> First Heading... </h1>
+    <h1 id="Header1"> First
+        Heading...
+    </h1>
     <p> This is the First Heading in the first paragraph. </p>
     <h2 id="Header2"> Second Heading... </h2>
     <div>
@@ -24,6 +27,50 @@
     </div>
     <a href="Weather.html">Weather News</a>
 
+    <div style="margin-top: 1%; width: 150px; 
+    border: 5px solid blueviolet; padding: 5px 50px; 
+    display: flex; justify-content: center">
+
+        <button style="margin-right: 35px; border: none; 
+        background-color: blue; color: white; font-size: 20px; 
+        border-radius: 20px; padding: 5px 10px; cursor: pointer;">
+            Login
+        </button>
+        <button style="margin-left: 35px; border: none; 
+        background-color: red; color: white; font-size: 20px; 
+        border-radius: 20px; padding: 5px 10px; cursor: not-allowed;
+        opacity: 0.5;">
+            Signup
+        </button>
+    </div>
+
+
+    <div style="margin-top: 1%; margin-left: 100px; padding: 5px; 
+    display: flex; justify-content: center">
+        <button style="margin-right: 35px; border: none; 
+        background-color: black; color: white; font-size: 20px; 
+        border-radius: 20px; padding: 5px 10px; cursor: pointer;">
+            <i class="fa-brands fa-github"></i>
+            <span class="label">Github</span>
+        </button>
+        <button style="margin-right: 35px; border: none; 
+        background-color: red; color: white; font-size: 20px; 
+        border-radius: 20px; padding: 5px 10px; cursor: pointer;">
+            <i class="fa-brands fa-google"></i>
+            <span class="label">Google</span>
+        </button>
+        <button style="margin-right: 35px; border: none; 
+        background-color: blue; color: white; font-size: 20px; 
+        border-radius: 20px; padding: 5px 10px; cursor: pointer;">
+            <i class="fa-brands fa-facebook"></i>
+            <span class="label">Facebook</span>
+        </button>
+    </div>
 </body>
 
 </html>
+<style>
+    .label {
+        padding-left: 5px;
+    }
+</style>

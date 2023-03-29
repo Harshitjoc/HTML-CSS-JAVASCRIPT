@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SignUpForm.css">
+    <title>Create a Signup Form</title>
+</head>
+
+<body>
+    <h1>Signup</h1>
+    <form>
+        <div>
+            <p>Name:</p>
+            <input class="input-item" type="text" name="full-name" placeholder="Full-Name" autofocus required>
+        </div>
+        <div>
+            <p>Email:</p>
+            <input class="input-item" type="email" name="Email" placeholder="Email" required>
+        </div>
+        <div>
+            <p>Age:</p>
+            <input class="input-item" type="number" name="Age" placeholder="Age" required min="18" max="47">
+        </div>
+        <div>
+            <p>Password:</p>
+            <input class="input-item" type="password" name="password" placeholder="Password" required maxlength="8">
+        </div>
+        <div>
+            <p>Confirm Password:</p>
+            <input class="input-item" type="password" name="Confirm-password" placeholder="Confirm-password" required
+                maxlength="8">
+        </div>
+        <div>
+            <p>Gender:</p>
+            <input type="radio" name="male" value="male">
+            Male </input>
+            <input type="radio" name="female" value="female">
+            Female </input>
+            <input type="radio" name="other" value="other">
+            Other </input>
+        </div>
+        <div>
+            <p>Security Question:</p>
+            <select name="Security-question">
+                <option value="first-pet-name">What was your First pet name?</option>
+                <option value="first-job">What was your First job?</option>
+                <option value="nickname">What was your nickname?</option>
+            </select>
+        </div>
+        <div>
+            <textarea name="answer" id="" cols="30" rows="6"></textarea>
+        </div>
+        <div>
+            Profile Picture: <br>
+            <input type="file">
+        </div>
+        <div>
+            <input type="reset">
+        </div>
+        <div>
+            <input type="checkbox" name="terms-conditions" value="accept">
+            I agree to accept terms and conditions
+        </div>
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</body>
+
+</html>
