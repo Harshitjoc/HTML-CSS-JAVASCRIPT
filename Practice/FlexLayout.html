@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #container1 {
+            width: 100vw;
+            background-color: lightcoral;
+            box-sizing: border-box;
+            padding: 32px;
+            margin-bottom: 10px;
+
+            display: flex;
+            flex-direction: row;
+            /* column, row-reverse, column-reverse  this can also be used*/
+            justify-content: space-between;
+            /* flex-start, flex-end, space-around, center */
+        }
+
+        #container2 {
+            width: 100vw;
+            background-color: lightcoral;
+            box-sizing: border-box;
+            padding: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            /* wrap-reverse nowrap */
+        }
+
+        #container3 {
+            width: 100vw;
+            height: 500px;
+            background-color: lightcoral;
+            box-sizing: border-box;
+            padding: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #container4 {
+            width: 100vw;
+            height: 500px;
+            background-color: lightcoral;
+            box-sizing: border-box;
+            padding: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: stretch;
+            justify-content: center;
+        }
+
+        #container5 {
+            width: 100vw;
+            height: 200px;
+            background-color: lightcoral;
+            box-sizing: border-box;
+            padding: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: stretch;
+            justify-content: center;
+        }
+
+        #container5 .item:nth-child(2) {
+            background-color: bisque;
+            /* flex-grow: 1; */
+            flex-basis: 120px;
+            /* order: -1; it moves it to start */
+            /* order: 1; it moves it to end */
+            /* order: 0; default place */
+        }
+
+        #container6 {
+            width: 100vw;
+            height: 200px;
+            background-color: lightcoral;
+            box-sizing: border-box;
+            padding: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: stretch;
+            justify-content: center;
+        }
+
+        #container6 .item:nth-child(even) {
+            background-color: bisque;
+
+        }
+
+        #container7 {
+            width: 100vw;
+            height: 300px;
+            margin: 0 auto;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container7 .item1 {
+            background-color: lightblue;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            padding: 32px;
+            font-size: 24px;
+            text-align: center;
+            /* transition-property: background-color;
+            transition-duration: 2000ms;
+            transition-timing-function: ease-in; */
+            transition: background-color 3s ease-out;
+        }
+
+        #container7 .item1:hover {
+            background-color: tomato;
+        }
+
+        #container7 .item2 {
+            background-color: lightblue;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            padding: 32px;
+            font-size: 24px;
+            text-align: center;
+            transition: background-color 3s ease-in-out,
+                border-radius 3s ease-out;
+        }
+
+        #container7 .item2:hover {
+            background-color: tomato;
+            border-radius: 50%;
+        }
+
+        #container7 .item3 {
+            background-color: lightblue;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            padding: 32px;
+            font-size: 24px;
+            text-align: center;
+
+            /* animation-name: pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards; */
+            animation: pulse 5s ease-in infinite;
+            /* shorthand */
+        }
+
+        #container7 .item3:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes pulse {
+            0% {
+                background-color: lawngreen;
+                transform: rotateZ(0deg);
+            }
+
+            100% {
+                background-color: blueviolet;
+                transform: rotateZ(360deg);
+            }
+        }
+
+        .item {
+            background-color: lightblue;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            padding: 32px;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+    <title>FlexLayout</title>
+</head>
+
+<body>
+    <div id="container1">
+        <div class="item">Div-1</div>
+        <div class="item">Div-2</div>
+        <div class="item">Div-3</div>
+        <div class="item">Div-4</div>
+    </div>
+    <div id="container2">
+        <div class="item">Div-1</div>
+        <div class="item">Div-2</div>
+        <div class="item">Div-3</div>
+        <div class="item">Div-4</div>
+        <div class="item">Div-5</div>
+        <div class="item">Div-6</div>
+        <div class="item">Div-7</div>
+        <div class="item">Div-8</div>
+        <div class="item">Div-9</div>
+        <div class="item">Div-10</div>
+        <div class="item">Div-11</div>
+        <div class="item">Div-12</div>
+        <div class="item">Div-13</div>
+        <div class="item">Div-14</div>
+        <div class="item">Div-15</div>
+        <div class="item">Div-16</div>
+    </div>
+    <div id="container3">
+        <div class="item">Div-1</div>
+        <div class="item">Div-2</div>
+        <div class="item">Div-3</div>
+        <div class="item">Div-4</div>
+    </div>
+    <div id="container4">
+        <div class="item">Div-1</div>
+        <div class="item">Div-2</div>
+        <div class="item">Div-3</div>
+        <div class="item">Div-4</div>
+    </div>
+    <div id="container5">
+        <div class="item">Div-1</div>
+        <div class="item">Div-2</div>
+        <div class="item">Div-3</div>
+        <div class="item">Div-4</div>
+    </div>
+    <div id="container6">
+        <div class="item">Div-1</div>
+        <div class="item">Div-2</div>
+        <div class="item">Div-3</div>
+        <div class="item">Div-4</div>
+    </div>
+    <div id="container7">
+        <div class="item1">Div-1</div>
+        <div class="item2">Div-2</div>
+        <div class="item3">Div-3</div>
+    </div>
+</body>
+
+</html>

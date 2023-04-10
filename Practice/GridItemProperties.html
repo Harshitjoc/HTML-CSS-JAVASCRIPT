@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Layout</title>
+</head>
+
+<body>
+    <div id="grid-container">
+        <div id="header">Header</div>
+        <div id="sidebar">Menu</div>
+        <div id="main">Main</div>
+        <div id="aside">Right</div>
+        <div id="footer">Footer</div>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    body {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    #header {
+        background-color: beige;
+        padding: 24px;
+        grid-area: header;
+    }
+
+    #sidebar {
+        background-color: bisque;
+        padding: 24px;
+        grid-area: sidebar;
+    }
+
+    #main {
+        background-color: antiquewhite;
+        padding: 24px;
+        height: 460px;
+        grid-area: main;
+    }
+
+    #aside {
+        background-color: aqua;
+        padding: 24px;
+        grid-area: aside;
+    }
+
+    #footer {
+        background-color: aquamarine;
+        padding: 24px;
+        grid-area: footer;
+    }
+
+    #grid-container {
+        display: grid;
+        grid-template-areas:
+            'header header header header header header'
+            'sidebar main main main main aside'
+            'footer footer footer footer footer footer';
+    }
+
+    @media (max-width: 900px) {
+        #grid-container {
+            grid-template-areas:
+                'header header header header header header'
+                'sidebar main main main main main'
+                'aside aside aside aside aside aside'
+                'footer footer footer footer footer footer';
+        }
+    }
+
+    @media (max-width: 400px) {
+        #grid-container {
+            grid-template-areas:
+                'header header header header header header'
+                'sidebar sidebar sidebar sidebar sidebar sidebar'
+                'main main main main main main'
+                'aside aside aside aside aside aside'
+                'footer footer footer footer footer footer';
+        }
+    }
+</style>
