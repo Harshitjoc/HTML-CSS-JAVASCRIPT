@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background-image: url("https://cdn.pixabay.com/photo/2021/04/13/06/59/woman-6174830_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    margin: 200px 0px;
+}
+
+#heading {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: red;
+}
+
+.key {
+    border: .4rem solid rgba(255, 255, 255, 1);
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+button div {
+    margin: 10px 0px;
+}
+
+button h1 {
+    margin: 0px 30px;
+}
+
+button h5 {
+    margin: 0;
+    color: rgb(0, 0, 255);
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}

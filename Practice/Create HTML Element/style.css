@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    background-color: aqua;
+}
+
+section {
+    margin: 50px;
+    display: grid;
+    justify-items: center;
+}
+
+#todo-input {
+    font-size: 25px;
+    padding: 12px 24px;
+    margin-right: 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+button {
+    border-radius: 2px;
+    border: 2px solid black;
+    font-size: 25px;
+    padding: 10px;
+    inline-size: fit-content;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#todo-list {
+    list-style-type: none;
+    display: contents;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 25px;
+    background-color: white;
+    padding: 10px;
+    width: 40%;
+    word-wrap: break-word;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+li .fa-trash {
+    cursor: pointer;
+}
