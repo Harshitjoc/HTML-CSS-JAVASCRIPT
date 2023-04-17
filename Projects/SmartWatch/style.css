@@ -62,12 +62,7 @@ main {
 
 #right {
     display: block;
-    flex-direction: row;
     align-self: center;
-}
-
-#header-wrapper {
-    margin-top: -100px;
 }
 
 #color-wrapper {
@@ -92,6 +87,10 @@ main {
     margin-left: 5px;
 }
 
+.watch-color:hover {
+    box-shadow: 2px 2px 10px gray;
+}
+
 #feature-wrapper button {
     width: 150px;
     height: 30px;
@@ -104,6 +103,7 @@ main {
     border-radius: 5px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 #buy-btn {
@@ -118,4 +118,31 @@ main {
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 940px) {
+    #feature-wrapper button {
+        margin-bottom: 10px;
+    }
+
+    main {
+        justify-content: center;
+    }
+
+    #left {
+        width: 500px;
+        margin-left: -100px;
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #nav-menu {
+        width: 768px;
+    }
+
+    main {
+        width: 768px;
+    }
 }
