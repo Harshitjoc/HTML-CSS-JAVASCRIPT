@@ -1,15 +1,16 @@
 "use strict";
 
-var input = document.getElementById("input"), // input/output button
-    number = document.querySelectorAll(".numbers div"), // number buttons
-    operator = document.querySelectorAll(".operators div"), // operator buttons
-    result = document.getElementById("result"), // equal button
-    clear = document.getElementById("clear"), // clear button
+var input = document.getElementById('input'), // input/output button
+    number = document.querySelectorAll('.numbers div'), // number buttons
+    operator = document.querySelectorAll('.operators div'), // operator buttons
+    result = document.getElementById('result'), // equal button
+    clear = document.getElementById('clear'), // clear button
     resultDisplayed = false; // flag to keep an eye on what output is displayed
 
 // adding click handlers to number buttons
 for (var i = 0; i < number.length; i++) {
     number[i].addEventListener("click", function (e) {
+
         // storing current input string and its last character in variables - used later
         var currentString = input.innerHTML;
         var lastChar = currentString[currentString.length - 1];
@@ -17,12 +18,7 @@ for (var i = 0; i < number.length; i++) {
         // if result is not diplayed, just keep adding
         if (resultDisplayed === false) {
             input.innerHTML += e.target.innerHTML;
-        } else if (
-            (resultDisplayed === true && lastChar === "+") ||
-            lastChar === "-" ||
-            lastChar === "×" ||
-            lastChar === "÷"
-        ) {
+        } else if (resultDisplayed === true && lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
             // if result is currently displayed and user pressed an operator
             // we need to keep on adding to the string for next operation
             resultDisplayed = false;
@@ -34,26 +30,21 @@ for (var i = 0; i < number.length; i++) {
             input.innerHTML = "";
             input.innerHTML += e.target.innerHTML;
         }
+
     });
 }
 
 // adding click handlers to number buttons
 for (var i = 0; i < operator.length; i++) {
     operator[i].addEventListener("click", function (e) {
+
         // storing current input string and its last character in variables - used later
         var currentString = input.innerHTML;
         var lastChar = currentString[currentString.length - 1];
 
         // if last character entered is an operator, replace it with the currently pressed one
-        if (
-            lastChar === "+" ||
-            lastChar === "-" ||
-            lastChar === "×" ||
-            lastChar === "÷"
-        ) {
-            var newString =
-                currentString.substring(0, currentString.length - 1) +
-                e.target.innerHTML;
+        if (lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
+            var newString = currentString.substring(0, currentString.length - 1) + e.target.innerHTML;
             input.innerHTML = newString;
         } else if (currentString.length == 0) {
             // if first key pressed is an opearator, don't do anything
@@ -62,11 +53,13 @@ for (var i = 0; i < operator.length; i++) {
             // else just add the operator pressed to the input
             input.innerHTML += e.target.innerHTML;
         }
+
     });
 }
 
 // on click of 'equal' button
 result.addEventListener("click", function () {
+
     // this is the string that we will be processing eg. -10+26+33-56*34/23
     var inputString = input.innerHTML;
 
@@ -111,11 +104,7 @@ result.addEventListener("click", function () {
     var add = operators.indexOf("+");
     while (add != -1) {
         // using parseFloat is necessary, otherwise it will result in string concatenation :)
-        numbers.splice(
-            add,
-            2,
-            parseFloat(numbers[add]) + parseFloat(numbers[add + 1])
-        );
+        numbers.splice(add, 2, parseFloat(numbers[add]) + parseFloat(numbers[add + 1]));
         operators.splice(add, 1);
         add = operators.indexOf("+");
     }
@@ -128,95 +117,4 @@ result.addEventListener("click", function () {
 // clearing the input on press of clear
 clear.addEventListener("click", function () {
     input.innerHTML = "";
-});
-
-
-// let runningTotal = 0;
-// let buffer = "0";
-// let previousOperator;
-
-// const screen = document.querySelector('.screen');
-
-// function buttonClick(value) {
-//     if (isNaN(value)) {
-//         handleSymbol(value);
-//     } else {
-//         handNumber(value);
-//     }
-//     screen.innerText = buffer;
-// }
-
-// function handleSymbol(symbol) {
-//     switch (symbol) {
-//         case 'C':
-//             buffer = '0';
-//             runningTotal = 0;
-//             break;
-//         case '=':
-//             if (previousOperator === null) {
-//                 return
-//             }
-//             flushOperation(parseInt(buffer));
-//             previousOperator = null;
-//             buffer = runningTotal;
-//             runningTotal = 0;
-//             break;
-//         case '←':
-//             if (buffer.length === 1) {
-//                 buffer = '0';
-//             } else {
-//                 buffer = buffer.substring(0, buffer, length - 1);
-//             }
-//             break;
-//         case '+':
-//         case '−':
-//         case '×':
-//         case '÷':
-//             handleMath(symbol);
-//             break;
-//     }
-// }
-
-// function handleMath(symbol) {
-//     if (buffer === '0') {
-//         return;
-//     }
-
-//     const intBuffer = parseInt(buffer);
-
-//     if (runningTotal === 0) {
-//         runningTotal = intBuffer;
-//     } else {
-//         flushOperation(intBuffer);
-//     }
-//     previousOperator = symbol;
-//     buffer = '0';
-// }
-
-// function flushOperation(intBuffer) {
-//     if (previousOperator === '+') {
-//         runningTotal += intBuffer;
-//     } else if (previousOperator === '−') {
-//         runningTotal -= intBuffer;
-//     } else if (previousOperator === '×') {
-//         runningTotal *= intBuffer;
-//     } else if (previousOperator === '÷') {
-//         runningTotal /= intBuffer;
-//     }
-// }
-
-// function handNumber(numberString) {
-//     if (buffer === "0") {
-//         buffer = numberString;
-//     } else {
-//         buffer += numberString;
-//     }
-// }
-
-// function init() {
-//     document.querySelector('.calc-buttons').addEventListener('click', function (event) {
-//         buttonClick(event.target.innerText);
-//     })
-// }
-
-// init();
+})

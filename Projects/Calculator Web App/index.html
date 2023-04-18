@@ -6,85 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Calculator by MaX1m!</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+    <title>Calculator</title>
 </head>
 
 <body>
+    <div id="section">
+        <header>
+            <div>Calculator</div>
+        </header>
 
-    <div class="wrapper">
-        <section class="screen">
-            0
-        </section>
-
-        <section id="input" class="calc-buttons">
-            <div class="calc-button-row">
-                <button class="calc-button double">
-                    C
-                </button>
-                <button class="calc-button">
-                    &larr;
-                </button>
-                <button class="calc-button">
-                    &divide;
-                </button>
+        <div class="calculator">
+            <div class="input" id="input"></div>
+            <div class="buttons">
+                <div class="operators">
+                    <div>+</div>
+                    <div>-</div>
+                    <div>&times;</div>
+                    <div>&divide;</div>
+                </div>
+                <div class="leftPanel">
+                    <div class="numbers">
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                    </div>
+                    <div class="numbers">
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                    </div>
+                    <div class="numbers">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                    <div class="numbers">
+                        <div>0</div>
+                        <div>.</div>
+                        <div id="clear">C</div>
+                    </div>
+                </div>
+                <div class="equal" id="result">=</div>
             </div>
-
-            <div class="calc-button-row">
-                <button class="calc-button">
-                    7
-                </button>
-                <button class="calc-button">
-                    8
-                </button>
-                <button class="calc-button">
-                    9
-                </button>
-                <button class="calc-button">
-                    &times;
-                </button>
-            </div>
-
-            <div class="calc-button-row">
-                <button class="calc-button">
-                    4
-                </button>
-                <button class="calc-button">
-                    5
-                </button>
-                <button class="calc-button">
-                    6
-                </button>
-                <button class="calc-button">
-                    &minus;
-                </button>
-            </div>
-
-            <div class="calc-button-row">
-                <button class="calc-button">
-                    3
-                </button>
-                <button class="calc-button">
-                    2
-                </button>
-                <button class="calc-button">
-                    1
-                </button>
-                <button class="calc-button">
-                    &plus;
-                </button>
-            </div>
-
-            <div class="calc-button-row">
-                <button class="calc-button triple">
-                    0
-                </button>
-                <button class="calc-button">
-                    &equals;
-                </button>
-            </div>
-
-        </section>
-
+        </div>
     </div>
 
 
@@ -93,5 +58,3 @@
 </body>
 
 </html>
-
-<!-- Background Image URL: https://i.imgur.com/mSPU63U.jpg -->
